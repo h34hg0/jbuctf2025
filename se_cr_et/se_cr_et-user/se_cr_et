@@ -1,0 +1,13 @@
+service se_cr_et
+{
+	disable     = no
+	type        = UNLISTED
+	wait        = no
+	server      = /usr/bin/python3
+    server_args = /root/se_cr_et.py
+	socket_type = stream
+	protocol    = tcp
+	user        = root
+	port	    = 10001
+	flags       = REUSE
+}
